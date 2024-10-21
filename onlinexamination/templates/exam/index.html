@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+    <head>
+        <style>
+            *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+            body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+}
+            .ht 
+            {
+                align-items: center;
+                color:#fff;
+            }
+            .ht img
+            {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity: 0.2;
+            }
+            .ht h2
+            {
+                align: center;
+                color: #fff;
+            }
+            .box
+{
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+}
+.banner
+{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: transparent;
+    background-image: linear-gradient(#fff,#fff);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -750px 0;
+    animation: backcolor 5s linear infinite alternate;
+}
+@keyframes backcolor
+{
+    100%{
+        background-position: 0 0;
+    }
+}
+        
+
+        </style>
+    </head>
+    <body>
+        {% include "exam/navbar.html" %}
+        <div class="ht">
+            <img src="{% static "image/online.png" %}" class="image"  alt="">
+        </div>
+        <div class="banner">
+            <h2>ONLINE EXAMITION SYSTEM</h2>
+        </div>
+            <div class="box">
+            <p><center>Attend your examinations online!</center></p>
+            <p><center>Register and Start your Journey Here:</center></p>
+            </div>
+           
+        
+
+    </body>
+    
+</html>
